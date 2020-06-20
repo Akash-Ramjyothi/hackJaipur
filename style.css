@@ -77,8 +77,9 @@ body {
 
 .sub-nav {
     float: left;
-    margin: 0.8em 0.5em;
+    margin: 0.8em 0.9em;
     color: #000;
+    font-size: 0.3em;
 }
 
 .sub-nav:hover {
@@ -122,8 +123,15 @@ ul.div-li {
 @media screen and (max-width: 500px) {
   .sub-nav {
     float: left;
-    margin: 0.8em 0.2em;
+    margin: 0.4em 0.2em !important;
     color: #000;
-    font-size: 0.8rem !important;
+    font-size: 0.2vw !important;
+    line-height: 0.2vw !important;
+}
+
+.sub-nav:hover {
+    color: #000;
+    border-bottom: 4px solid #09e97f;
+    text-decoration: none;
 }
  }
