@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Team codeBlooded">
+    <meta name="keywords" content="Mental Health, MoodWiz, MHWiz, [Tags]">
+    <meta name="description" content="Interact with MoodWiz to understand yourself better.">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>MoodWiz</title>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="w-100">
+        <nav class="navbar my-navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo.jpg" />
+                    Mood<i>Wiz</i></a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="iconify bar-icon" data-icon="fa-solid:bars" data-inline="false"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="NavDocs/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="NavDocs/dev.html">Developers</a>
+                        </li>
+                        <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Item 1</a>
+                                <a class="dropdown-item" href="#">Item 2</a>
+                                <a class="dropdown-item" href="#">Item 2</a>
+                            </div>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron bg-white">
+            <div class="container">
+                <div class="row mt-5 justify-content-between">
+                    <div class="col-md-5">
+                        <h1 style="margin-top: 40px;" class="display-4">
+                            Understand your mind.
+                        </h1>
+                        <div id="opi_container">
+                            <h4>Welcome to Mood<i>Wiz</i>. We value you.</h4>
+                            <h5>Interact with our Web Application and allow Rufus, our Therapy Dog tell you some awesome
+                                jokes (Chatbot)!</h5>
+                        </div>
+                        <button class="btn btn-blue font-weight-bold" data-toggle="modal" data-target=""
+                            style="margin-top: 60px;">
+                            Scroll Down <i class="fas fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/thinking-man.jpg" alt="back" class="img-fluid" />
+                    </div>
+                </div>
+
+                <div class="row mt-5 justify-content-between rev">
+                    <div class="col-md-5">
+                        <h1 style="margin-top: 60px;" class="display-4">
+                            Explore
+                        </h1>
+                        <div>
+                            <h4>Interact with Mood<i>Wiz</i> in the following two sections:</h4>
+                            <ol>
+                                <li>
+                                    <h5>Discover</h5>
+                                </li>
+                                <ul class="div-li">
+                                    <li>Read</li>
+                                    <li>Watch</li>
+                                    <li>Listen</li>
+                                    <li>Sketch</li>
+                                </ul>
+                                <li>
+                                    <h5>Connect</h5>
+                                </li>
+                                <ul class="div-li">
+                                    <li>Videoconference</li>
+                                    <li>Chatbot</li>
+                                    <li>Stories</li>
+                                </ul>
+                            </ol>
+                            <h5>Click on the Headers to Interact!</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/2.jpg" alt="back" class="img-fluid" />
+                    </div>
+                </div>
+
+                <div class="row justify-content-between">
+                    <!--Carousel-->
+                    <div class="discover-div">
+                        <a class="dis-bottom" style="float: left; width: 100%;" onclick="showDis(); hideDis();">
+                            <h2 class="mb-3" style="width: 100%;">Discover<span class="sr-only">(current)</span></h2>
+                        </a>
+                        <div id="disDiv" class="disp-hid">
+                            <a class="sub-nav" style="margin-left: 0;" onclick="myRead();">
+                                <h3>Read</h3>
+                            </a>
+                            <a class="sub-nav" onclick="myWatch();">
+                                <h3>Watch</h3>
+                            </a>
+                            <a class="sub-nav" onclick="myListen();">
+                                <h3>Listen</h3>
+                            </a>
+                            <a class="sub-nav" onclick="mySketch();">
+                                <h3>Sketch</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="connect-div">
+                        <a class="dis-bottom" style="float: left; width: 100%;" onclick="showCon(); hideCon();">
+                            <h2 class="mb-3" style="width: 100%;">Connect</h2>
+                        </a>
+                        <div id="conDiv" class="disp-hid">
+                            <a class="sub-nav" style="margin-left: 0;" onclick="myVidcall();">
+                                <h3>Videocall</h3>
+                            </a>
+                            <a class="sub-nav" onclick="myChatbot();">
+                                <h3>Chatbot</h3>
+                            </a>
+                            <a class="sub-nav" onclick="myStories();">
+                                <h3>Stories</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Carousel Ends-->
+                </div>
+                <div style="display: block; margin-top: 2.5rem;">
+                    <iframe class="if-cl" src="Canvas/index.html" scrollable="no" id="main-frame"></iframe>
+                </div>
+
+                <div class="row mt-5 justify-content-between">
+                    <div class="col-md-5">
+                        <h1 style="margin-top: 60px;" class="display-4">
+                            Still Need Help?
+                        </h1>
+                        <div>
+                            <h4>Please reach out to people who can help you better!</h4>
+                            <h5>Text your friends or family so they can assist you!</h5>
+                            <h5>Call at 091529 87821 or click on the button below to visit AASRA.</h5>
+                        </div>
+                        <button class="btn btn-blue font-weight-bold"
+                            onclick="window.location.href='http://www.aasra.info/helpline.html';"
+                            style="margin-top: 60px;">
+                            Visit AASRA
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/1.jpg" alt="back" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"> </script>
+        <!--Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <!--Scripts End-->
+        <!--Footer-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+            style="position: fixed; bottom: 0; left: 0; width: 100%;">
+            <div class="container d-block mx-auto">
+            </div>
+        </nav>
+</body>
+
+</html>
