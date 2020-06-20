@@ -13,6 +13,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>MoodWiz</title>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <script src="script.js"></script>
@@ -59,26 +60,27 @@
         <div class="jumbotron bg-white">
             <div class="container">
                 <div class="row mt-5 justify-content-between">
-                    <div class="col-md-5">
+                    <div class="col-md-5" data-aos="fade-in" data-aos-duration="1500">
                         <h1 style="margin-top: 40px; line-height: 0.9em;" class="display-4">
                             Understand your mind.
                         </h1>
                         <div id="opi_container">
                             <h4 style="margin-top: 20px;">Welcome to Mood<i>Wiz</i>. We value you.</h4><br>
-                            <h5>Whether you’re experiencing anxiety, sadness, or high levels of stress, Mood<i>Wiz</i> is designed to provide clinically validated techniques to make you feel good and be a better version of yourself!</h5>
+                            <h5>Whether you’re experiencing anxiety, sadness, or high levels of stress, Mood<i>Wiz</i>
+                                is designed to provide clinically validated techniques to make you feel good and be a
+                                better version of yourself!</h5>
                         </div>
-                        <a class="btn btn-blue font-weight-bold" href="#scroll-here"
-                            style="margin-top: 60px;">
+                        <a class="btn btn-blue font-weight-bold" href="#scroll-here" style="margin-top: 60px;">
                             Scroll Down <i class="fas fa-caret-down"></i>
-                    </a>
+                        </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-in" data-aos-duration="1000">
                         <img src="assets/thinking-man.jpg" alt="back" class="img-fluid" />
                     </div>
                 </div>
 
                 <div class="row mt-5 justify-content-between rev" id="scroll-here">
-                    <div class="col-md-5">
+                    <div class="col-md-5" data-aos="fade-in" data-aos-duration="1000">
                         <h1 style="margin-top: 60px;" class="display-4">
                             Explore
                         </h1>
@@ -106,12 +108,12 @@
                             <h5>Click on the Headers to Interact!</h5>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-in" data-aos-duration="1000">
                         <img src="assets/2.jpg" alt="back" class="img-fluid" />
                     </div>
                 </div><br><br>
 
-                <div class="row justify-content-between">
+                <div class="row justify-content-between" data-aos="fade-in" data-aos-duration="2000">
                     <!--Carousel-->
                     <div class="discover-div">
                         <a class="dis-bottom" style="float: left; width: 100%;" onclick="showDis(); hideDis();">
@@ -151,11 +153,12 @@
                     <!--Carousel Ends-->
                 </div>
                 <div style="display: block; margin-top: 2.5rem;">
-                    <iframe class="if-cl" allowusermedia allow="camera;microphone;speaker;" src="Canvas/index.html" scrollable="no" id="main-frame"></iframe>
+                    <iframe class="if-cl" allowusermedia allow="camera;microphone;speaker;" src="Canvas/index.html"
+                        scrollable="no" id="main-frame" data-aos="fade-in" data-aos-duration="1000"></iframe>
                 </div>
 
                 <div class="row mt-5 justify-content-between">
-                    <div class="col-md-5">
+                    <div class="col-md-5" data-aos="flip-right" data-aos-duration="2000">
                         <h1 style="margin-top: 60px;" class="display-4">
                             We Couldn't Help?
                         </h1>
@@ -170,7 +173,7 @@
                             Visit AASRA <i class="fas fa-caret-right"></i>
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="flip-left" data-aos-duration="2000">
                         <img src="assets/1.jpg" alt="back" class="img-fluid" />
                     </div>
                 </div>
@@ -190,6 +193,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+        <!--AOS Scripts-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <!--Scripts End-->
         <!--Footer-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
