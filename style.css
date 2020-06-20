@@ -135,3 +135,24 @@ ul.div-li {
     text-decoration: none;
 }
  }
+
+.log-link {
+  text-decoration: underline;
+  color: #000;
+}
+
+.log-link:hover {
+  color: #09e97f;
+}
+
+input[type=email] {
+  border: none;
+  border-bottom: 2px solid #212529;
+  border-radius: 0;
+}
+
+input[type=password] {
+  border: none;
+  border-bottom: 2px solid #212529;
+  border-radius: 0;
+}
