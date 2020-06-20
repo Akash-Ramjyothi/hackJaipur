@@ -17,7 +17,7 @@ Official Entry of Team codeBlooded, from SRM Institute of Science and Technology
 
 ## Track and Problem Statement 🚧
 
-We are integrating three domains with our project, namely:
+We are integrating three tracks with our project, namely:
 
 - **Tech and Health**: Technology can create sustainable and effective relations between a healthcare professional and the patient. It can also provide a cheaper, faster, and more beneficial solutions to prevent and battle illnesses.
 - **Diversity**: Diversity means the inclusion of all individuals as technology does not discriminate.
