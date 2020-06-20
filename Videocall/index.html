@@ -9,6 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Video Chat</title>
   <link rel="stylesheet" href="./assets/common.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 <body  class="agora-theme" >
   
@@ -69,14 +72,15 @@
 
 <script src="index.js"></script>
 
-  <div class="navbar-fixed">
+  <!-- <div class="navbar-fixed">
     <nav class="agora-navbar">
       <div class="nav-wrapper agora-primary-bg valign-wrapper">
         <h5 class="left-align"></h5>
         
       </div>
     </nav>
-  </div>
+  </div> -->
+  <h1 class="display-4" style="margin: 1.5rem;">Video Chat</h1>
   <form id="form" class="row col l12 s12">
     <div class="row container col l12 s12">
       <div class="col" style="min-width: 433px; max-width: 443px">
@@ -90,7 +94,7 @@
               
               <div class="row" style="margin: 0">
                 <div class="col s12">
-                <button class="btn btn-raised btn-primary waves-effect waves-light" id="join">JOIN</button>
+                <button class="btn btn-raised btn-primary waves-effect waves-light" id="join"">JOIN</button>
                 <button class="btn btn-raised btn-primary waves-effect waves-light" id="leave">LEAVE</button>
                 
                 </div>
@@ -173,9 +177,9 @@
   <!--For HackJaipur-->
   <form onsubmit="return sendMessage();">
   <div class="mainDiv">
-    <h1 align="left">Suggestions:</h1>
-    <textarea id="mainText" placeholder="Enter text here ..."></textarea>
-    <button id="submitBtn" onclick="submitClick()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    <h1 class="display-4" align="left" style="margin: 1.5rem">Suggestions:</h1>
+    <textarea id="mainText" placeholder="Enter text here ..." style="margin: 1.5rem" ></textarea>
+    <button id="submitBtn" onclick="submitClick()" style="margin: 0rem 1.5rem " ><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
   </div>
   </form>
 <!--Suggestion box with text field ENDS-->
