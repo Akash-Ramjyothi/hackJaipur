@@ -2,13 +2,15 @@
 
 Official Entry of Team codeBlooded, from SRM Institute of Science and Technology, Kattankulathur, to HackJaipur. <br>
 ![Collaborators](https://img.shields.io/badge/collaborators-4-red)
-![Status](https://img.shields.io/badge/status-under_development-yellow)
+![Status](https://img.shields.io/badge/status-complete-green)
 ![Issues](https://img.shields.io/badge/issues-0-blue)
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+![Deployment](https://img.shields.io/badge/deployed-azure-blue)  
 
 ## Links to HackJaipur
 
+![Hackjaipur Logo](repository-assets/cover.png)
 - [Devfolio](https://devfolio.co/hackjaipur/)
 - [Official Website](https://www.hackjaipur.com/)
 - [MLH](https://mlh.hackjaipur.com/)
@@ -53,6 +55,12 @@ With our Web Application we offer the following features:
   - **Chatbot** that assesses your mental state and recommends jokes to you so no matter how you're feeling, you end up smiling!
   - **Speeches** to motivate you to do better.
   - **Habit Tracker** that you can download and print, to help you inculcate good habits and kick out the bad ones.
+  
+![Landing Page](repository-assets/1.png)
+![Guide](repository-assets/2.png)
+![Sketch](repository-assets/3.png)
+![Videocall](repository-assets/4.png)
+![Listen](repository-assets/5.png)
 
 ## Installation and Execution
 
