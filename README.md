@@ -35,7 +35,7 @@ In our country, the discovery of a mental illness is often followed by denial an
 
 ## About Our Product 🔧
 ### What
-We at Team codeBlooded, propose a Web Application which is preventive and most importantly affordable. Our Web App called, **'MoodWiz'**, serves the purpose of Self Discovery and for troubled individuals we have features like an on screen Sketch Board, Videoconferencing feature, so you can reach out to a Psychologist or a Counselor, amidst a lot of other features. All information is provided by the user voluntarily and stays safe within our database. We do not store any essential data, as Security of the system is our priority. The WebApp provides minimalist interface aimed at users from all age groups.
+We at Team codeBlooded, propose a Web Application which is preventive and most importantly affordable. Our Web App called, **'MoodWiz'**, serves the purpose of Self Discovery without the hassle of having to create an account, and for troubled individuals we have features like an on screen Sketch Board, Videoconferencing feature, so you can reach out to a Psychologist or a Counselor, amidst a lot of other features. All information is provided by the user voluntarily and all communication is client side. We do not store any data, as Security of the Application is our priority. The WebApp provides minimalist interface aimed at users from all age groups and.
 
 ### Why
 As highlighted in the background as well, most people in our society think of mental illnesses or disorders like a taboo. It is high time now that we normalize mental disorders like any other disease, like cancer or diabetes. We need to understand that people with Mental Illnesses need acceptance and guidance. Given the current ratio of Patients to Mental Health Professionals, we are emphasizing on *Raising the Line* to help address these issues. We at Team codeBlooded, have consulted with Counselors and Psychologists to understand the needs of those who require help with their mind and have curated a Web Application that will definitely be beneficial to our society with proper implementation.
@@ -47,17 +47,20 @@ With our Web Application we offer the following features:
   - **Read** about how you can understand your mind, understand yourself. Know about ways you can use to understand your emotions.
   - **Watch** videos recorded by Mental Health Professionals* on ways you can use to tackle different emotions, boost your confidence, and inculcate good habits.
   - **Listen** to Music that calms you down, words of Psychologists that help you develop a positive attitude, a positive approach towards life.
-- ***Connect***
-  - **Videocall** and connect with available Psychologists and Counselors if you want someone to lend you an ear. With an inbuilt Suggestions Box, the Mental Health Professional can recommend ways with which you can be a better version of yourself.
-  - **Chatbot** that assesses your mental state and recommends jokes to you so no matter how you're feeling, you end up smiling!
   - **Online Sketchboard** that you can use to draw your heart out, and we won't save anything that you create!
+- ***Connect***
+  - **Videochat** and connect with available Psychologists and Counselors if you want someone to lend you an ear. With an inbuilt Suggestions Box, the Mental Health Professional can recommend ways with which you can be a better version of yourself.
+  - **Chatbot** that assesses your mental state and recommends jokes to you so no matter how you're feeling, you end up smiling!
+  - **Speeches** to motivate you to do better.
   - **Habit Tracker** that you can download and print, to help you inculcate good habits and kick out the bad ones.
 
 ## Installation and Execution
 
+You can visit the link or follow these steps:
+
 1. Clone this repository.
 2. Open index.html.
-3. Make sure you have active Internet Connection so the Web Application functions best.
+3. Make sure you have active Internet Connection so the Web Application functions best (Google DialogFlow Chatbot requires access to the Internet).
 
 ## Timeline ⏰
 
@@ -68,22 +71,20 @@ With our Web Application we offer the following features:
 ## Technology Principles Implemented 💡
 
 1. Cloud First
-2. Minimalist Design
-3. Reusable
-4. Open APIs
+2. Mobile First
+3. Minimalist Design
+4. Reusable
 
 ## Technology Stack 💻
 
 - Firebase
 - Azure
-- Elastic
 - Kotlin (For a WebView App)
 - HTML, CSS, JavaScript
 - Google Cloud DialogFlow
-- APIs
-  - GitHub Actions
-  - Auth0
-  - Agora
+- Collect.chat
+- GitHub Actions
+- Agora.io
 
 ## Use Cases 🤝
 
@@ -96,10 +97,11 @@ With our Web Application we offer the following features:
 - Implementation of AIML Models to understand user pattern.
 - Feature to upload files for the *Discover* Section, material can be added after carefully reviewing it.
 - Add support for people going through clinically verified Mental Disorders (requires evaluation).
+- Personalized experience with a Login Account.
 
 ## Collaborators 🤖
 
-- [Aaishika S Bhattacharya](https://www.github.com/aaishikasb)
+- [Aaishika S Bhattacharya](https://www.github.com/aaishikasb) - Team Lead
 - [Souharda Biswas](https://www.github.com/TheSouharda)
 - [Akash Ramjyothi](https://www.github.com/akash-ramjyothi)
 - [Gyanesh Samanta](https://www.github.com/Gyanesh-Samanta-123)
