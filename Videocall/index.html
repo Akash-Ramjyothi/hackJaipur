@@ -7,91 +7,94 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Video Chat</title>
   <link rel="stylesheet" href="./assets/common.css" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
-<body  class="agora-theme" >
-  
+
+<body class="agora-theme" data-aos="fade-in" data-aos-duration="1000">
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 
- 
 
-<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA-dR6Hq_DP2-8Zk7wWfwDAZcwwADlyXdk",
-    authDomain: "codeblooded-001.firebaseapp.com",
-    databaseURL: "https://codeblooded-001.firebaseio.com",
-    projectId: "codeblooded-001",
-    storageBucket: "codeblooded-001.appspot.com",
-    messagingSenderId: "547165605600",
-    appId: "1:547165605600:web:82647a010b09fe255a8a85",
-    measurementId: "G-JLLGWL0T50"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA-dR6Hq_DP2-8Zk7wWfwDAZcwwADlyXdk",
+      authDomain: "codeblooded-001.firebaseapp.com",
+      databaseURL: "https://codeblooded-001.firebaseio.com",
+      projectId: "codeblooded-001",
+      storageBucket: "codeblooded-001.appspot.com",
+      messagingSenderId: "547165605600",
+      appId: "1:547165605600:web:82647a010b09fe255a8a85",
+      measurementId: "G-JLLGWL0T50"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
-  //For HackJaipur
-  var myName = prompt("Enter your name");
+    //For HackJaipur
+    var myName = prompt("Enter your name");
 
-  function sendMessage() {
-    // get message
-    var message = document.getElementById("mainText").value;
+    function sendMessage() {
+      // get message
+      var message = document.getElementById("mainText").value;
 
-    // save in database
-    firebase.database().ref("messages").push().set({
-      "sender": myName,
-      "message": message
-    });
+      // save in database
+      firebase.database().ref("messages").push().set({
+        "sender": myName,
+        "message": message
+      });
 
-    // prevent form from submitting
-    return false;
-  }
+      // prevent form from submitting
+      return false;
+    }
 
-  // listen for incoming messages
-  firebase.database().ref("messages").on("child_added", function(snapshot) {
-    var html = "";
-    html += "<li>";
+    // listen for incoming messages
+    firebase.database().ref("messages").on("child_added", function (snapshot) {
+      var html = "";
+      html += "<li>";
       //html += snapshot.val().sender + ": " + snapshot.val().message;
       html += snapshot.val().message;
-    html += "</li>"; 
-    
-    document.getElementById("messages").innerHTML += html;
-  });
-</script>
+      html += "</li>";
 
-<script src="index.js"></script>
+      document.getElementById("messages").innerHTML += html;
+    });
+  </script>
 
-  
+  <script src="index.js"></script>
+
+
   <h1 class="display-4" style="margin: 1.5rem;">Video Chat</h1>
   <form id="form" class="row col l12 s12">
     <div class="row container col l12 s12">
       <div class="col" style="min-width: 433px; max-width: 443px">
         <div class="card" style="margin-top: 0px; margin-bottom: 0px;">
           <div class="row card-content" style="margin-bottom: 0px;">
-              
+
             <!--  <div class="input-field">
                 <label for="channel" class="active">Enter Meeting ID:</label>
                 <input type="text" placeholder="Meeting ID" name="channel">
               </div> -->
-              
-              <div class="row" style="margin: 0">
-                <div class="col s12">
+
+            <div class="row" style="margin: 0">
+              <div class="col s12">
                 <button class="btn btn-raised btn-primary waves-effect waves-light" id="join"">JOIN</button>
-                <button class="btn btn-raised btn-primary waves-effect waves-light" id="leave">LEAVE</button>
-                
-                </div>
+                <button class=" btn btn-raised btn-primary waves-effect waves-light" id="leave">LEAVE</button>
+
               </div>
+            </div>
           </div>
         </div>
         <ul class="collapsible card agora-secondary-border" style="margin-top: .4rem; border: 1px ">
@@ -157,7 +160,7 @@
       </div>
     </div>
 
-      
+
 
 
 
@@ -188,18 +191,19 @@
 
 
 
-<!--Suggestion box with text field STARTS-->
+  <!--Suggestion box with text field STARTS-->
   <!--For HackJaipur-->
   <form onsubmit="return sendMessage();">
-  <div class="mainDiv">
-    <h1 class="display-4" align="left" style="margin: 1.5rem">Suggestions:</h1>
-    <textarea id="mainText" placeholder="Enter text here ..." style="margin: 1.5rem" ></textarea>
-    <button id="submitBtn" onclick="submitClick()" style="margin: 0rem 1.5rem " ><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-  </div>
+    <div class="mainDiv">
+      <h1 class="display-4" align="left" style="margin: 1.5rem">Suggestions:</h1>
+      <textarea id="mainText" placeholder="Enter text here ..." style="margin: 1.5rem"></textarea>
+      <button id="submitBtn" onclick="submitClick()" style="margin: 0rem 1.5rem "><i class="fa fa-arrow-right"
+          aria-hidden="true"></i></button>
+    </div>
   </form>
-<!--Suggestion box with text field ENDS-->
+  <!--Suggestion box with text field ENDS-->
 
-<!--Responses of suggestion STARTS-->
+  <!--Responses of suggestion STARTS-->
   <!--create a list-->
   <ul id="messages"></ul>
   <!--Responses of suggestion ENDS-->
@@ -228,8 +232,8 @@
       }
     ]
 
-    function Toastify (options) {
-      M.toast({html: options.text, classes: options.classes})
+    function Toastify(options) {
+      M.toast({ html: options.text, classes: options.classes })
     }
 
     var Toast = {
@@ -276,7 +280,7 @@
       return obj
     }
 
-    function addView (id, show) {
+    function addView(id, show) {
       if (!$("#" + id)[0]) {
         $("<div/>", {
           id: "remote_video_panel_" + id,
@@ -290,33 +294,33 @@
 
         $("<div/>", {
           id: "remote_video_info_" + id,
-          class: "video-profile " + (show ? "" :  "hide"),
+          class: "video-profile " + (show ? "" : "hide"),
         }).appendTo("#remote_video_panel_" + id)
 
         $("<div/>", {
-          id: "video_autoplay_"+ id,
+          id: "video_autoplay_" + id,
           class: "autoplay-fallback hide",
         }).appendTo("#remote_video_panel_" + id)
       }
     }
-    function removeView (id) {
+    function removeView(id) {
       if ($("#remote_video_panel_" + id)[0]) {
-        $("#remote_video_panel_"+id).remove()
+        $("#remote_video_panel_" + id).remove()
       }
     }
 
-    function getDevices (next) {
+    function getDevices(next) {
       AgoraRTC.getDevices(function (items) {
         items.filter(function (item) {
           return ["audioinput", "videoinput"].indexOf(item.kind) !== -1
         })
-        .map(function (item) {
-          return {
-          name: item.label,
-          value: item.deviceId,
-          kind: item.kind,
-          }
-        })
+          .map(function (item) {
+            return {
+              name: item.label,
+              value: item.deviceId,
+              kind: item.kind,
+            }
+          })
         var videos = []
         var audios = []
         for (var i = 0; i < items.length; i++) {
@@ -346,7 +350,7 @@
             })
           }
         }
-        next({videos: videos, audios: audios})
+        next({ videos: videos, audios: audios })
       })
     }
 
@@ -359,7 +363,7 @@
       params: {}
     }
 
-    function handleEvents (rtc) {
+    function handleEvents(rtc) {
       // Occurs when an error message is reported and requires error handling.
       rtc.client.on("error", (err) => {
         console.log(err)
@@ -370,7 +374,7 @@
         console.log("id", evt)
         let streams = rtc.remoteStreams.filter(e => id !== e.getId())
         let peerStream = rtc.remoteStreams.find(e => id === e.getId())
-        if(peerStream && peerStream.isPlaying()) {
+        if (peerStream && peerStream.isPlaying()) {
           peerStream.stop()
         }
         rtc.remoteStreams = streams
@@ -386,7 +390,7 @@
         console.log("stream-published")
       })
       // Occurs when the remote stream is added.
-      rtc.client.on("stream-added", function (evt) {  
+      rtc.client.on("stream-added", function (evt) {
         var remoteStream = evt.stream
         var id = remoteStream.getId()
         Toast.info("stream-added uid: " + id)
@@ -412,7 +416,7 @@
         var remoteStream = evt.stream
         var id = remoteStream.getId()
         Toast.info("stream-removed uid: " + id)
-        if(remoteStream.isPlaying()) {
+        if (remoteStream.isPlaying()) {
           remoteStream.stop()
         }
         rtc.remoteStreams = rtc.remoteStreams.filter(function (stream) {
@@ -421,13 +425,13 @@
         removeView(id)
         console.log("stream-removed remote-uid: ", id)
       })
-      rtc.client.on("onTokenPrivilegeWillExpire", function(){
+      rtc.client.on("onTokenPrivilegeWillExpire", function () {
         // After requesting a new token
         // rtc.client.renewToken(token);
         Toast.info("onTokenPrivilegeWillExpire")
         console.log("onTokenPrivilegeWillExpire")
       })
-      rtc.client.on("onTokenPrivilegeDidExpire", function(){
+      rtc.client.on("onTokenPrivilegeDidExpire", function () {
         // After requesting a new token
         // client.renewToken(token);
         Toast.info("onTokenPrivilegeDidExpire")
@@ -446,7 +450,7 @@
       *  token; string,
       * }
      **/
-    function join (rtc, option) {
+    function join(rtc, option) {
       if (rtc.joined) {
         Toast.error("Your already joined")
         return;
@@ -459,7 +463,7 @@
        *    Ensure that you set these properties before calling Client.join.
        *  You could find more detail here. https://docs.agora.io/en/Video/API%20Reference/web/interfaces/agorartc.clientconfig.html
       **/
-      rtc.client = AgoraRTC.createClient({mode: option.mode, codec: option.codec})
+      rtc.client = AgoraRTC.createClient({ mode: option.mode, codec: option.codec })
 
       rtc.params = option
 
@@ -515,11 +519,11 @@
 
             // publish local stream
             publish(rtc)
-          }, function (err)  {
+          }, function (err) {
             Toast.error("stream init failed, please open console see more detail")
             console.error("init local stream failed ", err)
           })
-        }, function(err) {
+        }, function (err) {
           Toast.error("client join failed, please open console see more detail")
           console.error("client join failed", err)
         })
@@ -529,7 +533,7 @@
       })
     }
 
-    function publish (rtc) {
+    function publish(rtc) {
       if (!rtc.client) {
         Toast.error("Please Join Room First")
         return
@@ -551,7 +555,7 @@
       rtc.published = true
     }
 
-    function unpublish (rtc) {
+    function unpublish(rtc) {
       if (!rtc.client) {
         Toast.error("Please Join Room First")
         return
@@ -571,7 +575,7 @@
       rtc.published = false
     }
 
-    function leave (rtc) {
+    function leave(rtc) {
       if (!rtc.client) {
         Toast.error("Please Join First!")
         return
@@ -586,7 +590,7 @@
        **/
       rtc.client.leave(function () {
         // stop stream
-        if(rtc.localStream.isPlaying()) {
+        if (rtc.localStream.isPlaying()) {
           rtc.localStream.stop()
         }
         // close stream
@@ -594,7 +598,7 @@
         for (let i = 0; i < rtc.remoteStreams.length; i++) {
           var stream = rtc.remoteStreams.shift()
           var id = stream.getId()
-          if(stream.isPlaying()) {
+          if (stream.isPlaying()) {
             stream.stop()
           }
           removeView(id)
@@ -682,6 +686,11 @@
 
   <script>var mainText = document.getElementById("mainText");
     var submitBtn = document.getElementById("submitBtn");</script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-  </body>
+</body>
+
 </html>
